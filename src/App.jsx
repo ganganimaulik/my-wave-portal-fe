@@ -172,7 +172,7 @@ export default function App() {
           <div>
             <textarea disabled={loading} value={waveInputMsg} onChange={(e) => setWaveInputMsg(e.target.value)} rows={3} required style={{width: '100%'}}/>
           </div>
-          <button className="waveButton" type="submit">
+          <button disabled={loading} className="waveButton" type="submit">
             Wave at Me
           </button>
         </form>
