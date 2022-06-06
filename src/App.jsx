@@ -196,14 +196,15 @@ export default function App() {
         <div className="bio">
         <strong>I am maulik</strong> - fullstack MERN developer. I have worked on meeting assistant SaaS app Bluecap.ai - Connect your Ethereum wallet and wave at me!
         </div>
-        <form onSubmit={wave} style={{textAlign: 'center', marginTop: '15px'}}>
+        {currentAccount && (<form onSubmit={wave} style={{textAlign: 'center', marginTop: '15px'}}>
           <div>
             <textarea placeholder='enter your message..' disabled={loading} value={waveInputMsg} onChange={(e) => setWaveInputMsg(e.target.value)} rows={3} required style={{width: '100%'}}/>
           </div>
           <button disabled={loading} className="waveButton" type="submit">
             Wave at Me
           </button>
-        </form>
+        </form>)}
+        
          {/*
         * If there is no currentAccount render this button
         */}
